@@ -3,14 +3,11 @@ package Controllers
 import (
 	"fmt"
 	"gin/Middlewares"
+	"gin/Services"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 	"net/http"
 	_ "strconv"
-
-	_ "fmt"
-
-	"gin/Services"
 
 	"gin/Models"
 
@@ -97,8 +94,16 @@ func SelIndex(c *gin.Context)  {
 	})
 }
 
-
 func AllIndex(c *gin.Context)  {
+	defer func() {
+		err := recover() // recover内置函数，可以捕捉到异常
+		if err != nil {  // 说明捕捉到错误
+			// 写Error级别的日志
+			Middlewares.Logger().WithFields(logrus.Fields{
+				"name": "zhh",
+			}).Error(err)
+		}
+	}()
 
 	// 全查询
 	var email []Models.Email
@@ -106,6 +111,10 @@ func AllIndex(c *gin.Context)  {
 
 	// 带条件查询 模糊查询
 	//Mysql.DB.Where("email LIKE ?", "%163%").Find(&email)
+
+	for i := 0; i < len(email); i++ {
+		fmt.Println(email[i].ID, email[i].UserID, email[i].Email, email[i].Subscribed)
+	}
 
 	c.JSON(http.StatusOK, gin.H{
 		"code": 1,
