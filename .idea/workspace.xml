@@ -20,16 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9de69cf8-4433-478c-932b-12e65ef66edd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Models/emailModel.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/userModel.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/utils1.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/testController.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/testController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/logModel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Databases/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/Databases/mysql.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Middlewares/logMiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/logMiddleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/testModel.go" beforeDir="false" afterPath="$PROJECT_DIR$/Models/testModel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/Router/router.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/2020-08-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2020-08-27.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/gin.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/gin.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +66,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build gin" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="ginproject" />
       <working_directory value="$PROJECT_DIR$" />
@@ -80,8 +76,18 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="ginproject" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="gin" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build gin" />
       </list>
     </recent_temporary>
@@ -100,26 +106,27 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="471" key="GridCell.Tab.0.bottom" timestamp="1598519017837">
+    <state width="1877" height="539" key="GridCell.Tab.0.bottom" timestamp="1598525101693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="471" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598519017837" />
-    <state width="1877" height="471" key="GridCell.Tab.0.center" timestamp="1598519017837">
+    <state width="1877" height="539" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598525101693" />
+    <state width="1877" height="539" key="GridCell.Tab.0.center" timestamp="1598525101693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="471" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598519017837" />
-    <state width="1877" height="471" key="GridCell.Tab.0.left" timestamp="1598519017837">
+    <state width="1877" height="539" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598525101693" />
+    <state width="1877" height="539" key="GridCell.Tab.0.left" timestamp="1598525101693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="471" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598519017837" />
-    <state width="1877" height="471" key="GridCell.Tab.0.right" timestamp="1598519017837">
+    <state width="1877" height="539" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598525101693" />
+    <state width="1877" height="539" key="GridCell.Tab.0.right" timestamp="1598525101693">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="471" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598519017837" />
+    <state width="1877" height="539" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598525101693" />
   </component>
 </project>

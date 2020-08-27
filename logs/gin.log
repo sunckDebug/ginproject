@@ -11,4 +11,5 @@
 [GIN-debug] POST   /v1.0/log                 --> gin/Controllers.LogIndex (6 handlers)
 [GIN-debug] POST   /v1.0/red                 --> gin/Controllers.RedIndex (6 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2020/08/27 - 17:14:41 | 200 |      1.0028ms |       127.0.0.1 | POST     "/v1.0/all"
+[GIN] 2020/08/27 - 18:44:41 | 200 |      4.0103ms |       127.0.0.1 | POST     "/v1.0/all"
+[GIN] 2020/08/27 - 18:44:42 | 200 |      2.0053ms |       127.0.0.1 | POST     "/v1.0/all"
