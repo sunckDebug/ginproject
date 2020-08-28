@@ -61,7 +61,7 @@ func Logger() *logrus.Logger {
 }
 
 func LoggerToFile() gin.HandlerFunc {
-	//logger := Logger()
+	logger := Logger()
 	return func(c *gin.Context) {
 		// 开始时间
 		startTime := time.Now()
@@ -90,20 +90,24 @@ func LoggerToFile() gin.HandlerFunc {
 		// 请求数据
 		body, _ := ioutil.ReadAll(c.Request.Body)
 
+		// 请求时间
+		datetime := time.Now().Format("2006-01-02 15:04:05")
+
+
+		//日志格式
+		logger.Infof("| %3d | %13v | %15s | %s | %s |",
+			statusCode,
+			latencyTime,
+			clientIP,
+			reqMethod,
+			reqUri,
+		)
+
 		// 写入数据库
 		str1 := fmt.Sprintf("%13v", latencyTime)
 		str2 := fmt.Sprintf("%s", body)
-		req := Models.Request{StatusCode:statusCode, LatencyTime:str1, ClientIP:clientIP, ReqMethod: reqMethod, ReqUri:reqUri, Body:str2}
+		req := Models.Request{StatusCode:statusCode, LatencyTime:str1, RequestTime:datetime, ClientIP:clientIP, ReqMethod: reqMethod, ReqUri:reqUri, Body:str2}
 		Mysql.DB.Create(&req)
-
-		//日志格式
-		//logger.Infof("| %3d | %13v | %15s | %s | %s |",
-		//	statusCode,
-		//	latencyTime,
-		//	clientIP,
-		//	reqMethod,
-		//	reqUri,
-		//)
 	}
 }
 

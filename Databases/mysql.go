@@ -12,6 +12,8 @@ var DB *gorm.DB
 func init()  {
 	var err error
 	DB, err = gorm.Open("mysql", "root:root@/go?charset=utf8&parseTime=True&loc=Local")
+	// 以实现结构体名为非复数形式 默认是false
+	DB.SingularTable(true)
 	if err != nil {
 		fmt.Printf("mysql connect error %v", err)
 	}

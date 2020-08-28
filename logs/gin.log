@@ -4,12 +4,13 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] POST   /v1.0/testinsert          --> gin/Controllers.TestInsert (6 handlers)
-[GIN-debug] POST   /v1.0/add                 --> gin/Controllers.AddIndex (6 handlers)
-[GIN-debug] POST   /v1.0/sel                 --> gin/Controllers.SelIndex (6 handlers)
-[GIN-debug] POST   /v1.0/all                 --> gin/Controllers.AllIndex (6 handlers)
-[GIN-debug] POST   /v1.0/log                 --> gin/Controllers.LogIndex (6 handlers)
-[GIN-debug] POST   /v1.0/red                 --> gin/Controllers.RedIndex (6 handlers)
+[GIN-debug] POST   /api/v1.0/testinsert      --> gin/Controllers/v1%2e0.TestInsert (6 handlers)
+[GIN-debug] POST   /api/v1.0/add             --> gin/Controllers/v1%2e0.AddIndex (6 handlers)
+[GIN-debug] POST   /api/v1.0/sel             --> gin/Controllers/v1%2e0.SelIndex (7 handlers)
+[GIN-debug] POST   /api/v1.0/all             --> gin/Controllers/v1%2e0.AllIndex (6 handlers)
+[GIN-debug] POST   /api/v1.0/log             --> gin/Controllers/v1%2e0.LogIndex (6 handlers)
+[GIN-debug] POST   /api/v1.0/red             --> gin/Controllers/v1%2e0.RedIndex (6 handlers)
+[GIN-debug] POST   /api/v2.0/kk55kk          --> gin/Controllers/v2%2e0.Kk55kk (6 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2020/08/27 - 18:44:41 | 200 |      4.0103ms |       127.0.0.1 | POST     "/v1.0/all"
-[GIN] 2020/08/27 - 18:44:42 | 200 |      2.0053ms |       127.0.0.1 | POST     "/v1.0/all"
+[GIN] 2020/08/28 - 11:23:02 | 200 |      3.0313ms |       127.0.0.1 | POST     "/api/v1.0/sel"
+[GIN] 2020/08/28 - 11:23:06 | 200 |      2.0054ms |       127.0.0.1 | POST     "/api/v1.0/all"

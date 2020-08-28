@@ -1,7 +1,6 @@
 package Router
 
 import (
-	"gin/Controllers"
 	"gin/Middlewares"
 	"gin/Sessions"
 	"github.com/gin-contrib/sessions"
@@ -17,19 +16,14 @@ func InitRouter() {
 	router.Use(Middlewares.Cors())
 	// 使用 session(cookie-based)
 	router.Use(sessions.Sessions("myyyyysession", Sessions.Store))
-	// 路由分组
-	v1 := router.Group("v1.0")
+	// 方便统一添加路由组前缀 多服务器上线使用
+	Group := router.Group("api")
 	// 要在路由组之前全局使用「jwt中间件」
-	//v1.Use(Middlewares.JWTAuth())
-	{
-		v1.POST("/testinsert", Controllers.TestInsert)
-		v1.POST("/add", Controllers.AddIndex)
-		v1.POST("/sel", Controllers.SelIndex)
-		v1.POST("/all", Controllers.AllIndex)
-		v1.POST("/log", Controllers.LogIndex)
-		v1.POST("/red", Controllers.RedIndex)
-	}
-
+	//Group.Use(Middlewares.JWTAuth())
+	// 注册v1路由
+	V1Router(Group)
+	// 注册v2路由
+	V2Router(Group)
 	// 启动监听8080端口
 	router.Run(":8080")
 }

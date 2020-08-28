@@ -1,4 +1,4 @@
-package Controllers
+package v1_0
 
 import (
 	"fmt"
@@ -8,6 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"net/http"
 	_ "strconv"
+	"time"
 
 	"gin/Models"
 
@@ -98,10 +99,19 @@ func AllIndex(c *gin.Context)  {
 	defer func() {
 		err := recover() // recover内置函数，可以捕捉到异常
 		if err != nil {  // 说明捕捉到错误
+			// 请求时间
+			datetime := time.Now().Format("2006-01-02 15:04:05")
+			// 报错信息
+			str1 := fmt.Sprintf("%s", err)
+			// 请求路由
+			reqUri := c.Request.RequestURI
 			// 写Error级别的日志
 			Middlewares.Logger().WithFields(logrus.Fields{
 				"name": "zhh",
 			}).Error(err)
+			// 错误信息写入数据库记录
+			error := Models.Error{DateTime: datetime, Body: str1, ReqUri: reqUri, Name: "zhh"}
+			Mysql.DB.Create(&error)
 		}
 	}()
 
