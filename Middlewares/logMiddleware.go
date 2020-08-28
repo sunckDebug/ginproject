@@ -2,12 +2,9 @@ package Middlewares
 
 import (
 	"fmt"
-	Mysql "gin/Databases"
-	"gin/Models"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 	"io"
-	"io/ioutil"
 	"os"
 	"path"
 	"time"
@@ -88,10 +85,10 @@ func LoggerToFile() gin.HandlerFunc {
 		clientIP := c.ClientIP()
 
 		// 请求数据
-		body, _ := ioutil.ReadAll(c.Request.Body)
+		//body, _ := ioutil.ReadAll(c.Request.Body)
 
 		// 请求时间
-		datetime := time.Now().Format("2006-01-02 15:04:05")
+		//datetime := time.Now().Format("2006-01-02 15:04:05")
 
 
 		//日志格式
@@ -104,13 +101,12 @@ func LoggerToFile() gin.HandlerFunc {
 		)
 
 		// 写入数据库
-		str1 := fmt.Sprintf("%13v", latencyTime)
-		str2 := fmt.Sprintf("%s", body)
-		req := Models.Request{StatusCode:statusCode, LatencyTime:str1, RequestTime:datetime, ClientIP:clientIP, ReqMethod: reqMethod, ReqUri:reqUri, Body:str2}
-		Mysql.DB.Create(&req)
+		//str1 := fmt.Sprintf("%13v", latencyTime)
+		//str2 := fmt.Sprintf("%s", body)
+		//req := Models.Request{StatusCode:statusCode, LatencyTime:str1, RequestTime:datetime, ClientIP:clientIP, ReqMethod: reqMethod, ReqUri:reqUri, Body:str2}
+		//Mysql.DB.Create(&req)
 	}
 }
-
 
 
 //func main() {

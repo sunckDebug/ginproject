@@ -20,10 +20,10 @@ func InitRouter() {
 	Group := router.Group("api")
 	// 要在路由组之前全局使用「jwt中间件」
 	//Group.Use(Middlewares.JWTAuth())
-	// 注册v1路由
-	V1Router(Group)
-	// 注册v2路由
-	V2Router(Group)
+	// 注册TestRouter路由
+	TestRouter(Group)
+	// 注册EmailRouter路由
+	EmailRouter(Group)
 	// 启动监听8080端口
 	router.Run(":8080")
 }
