@@ -1,6 +1,5 @@
 package Controllers
 
-
 import (
 	Mysql "gin/Databases"
 	"gin/Models"
@@ -82,10 +81,8 @@ func RetrieveIndex(c *gin.Context)  {
 }
 
 
-
 // 发送邮件
 func SendIndex(c *gin.Context)  {
-
 	// 接收接口传入数据
 	var emailService Services.SendLog
 	// 判断是否为json
@@ -96,9 +93,10 @@ func SendIndex(c *gin.Context)  {
 
 
 	// 如果为空赋默认值
-	if emailService.Username == ""{
-		emailService.Username = Utils.USERNAME
+	if(len(emailService.Toname) < 1){
+		emailService.Toname = []string{Utils.USERNAME}
 	}
+	// 如果为空赋默认值
 	if emailService.Content == ""{
 		emailService.Content = "服务器发送的日志"
 	}
@@ -109,7 +107,7 @@ func SendIndex(c *gin.Context)  {
 
 
 	// 发送邮件
-	err2 := Utils.SendMail(Utils.USERNAME, emailService.Username, emailService.Content, emailService.Filename)
+	err2 := Utils.SendMail(Utils.USERNAME, emailService.Toname, emailService.Content, emailService.Filename)
 	if err2 != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"code": -1, "message": err2.Error()});return
 	}

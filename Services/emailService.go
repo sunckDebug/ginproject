@@ -5,16 +5,16 @@ import "gin/Models"
 
 
 type Email struct {
-	Id         int     `json:"id"`
-	UserID     int     `json:"user_id"`
-	Email      string  `json:"email"`
-	Subscribed bool    `json:"subscribed"`
+	Id         int       `json:"id"`
+	UserID     int       `json:"user_id"`
+	Email      string    `json:"email"`
+	Subscribed bool      `json:"subscribed"`
 }
 
 type SendLog struct {
-	Username   string  `json:"username"`
-	Content   string   `json:"content"`
-	Filename   string  `json:"filename"`
+	Toname   []string    `json:"toname"`
+	Content    string    `json:"content"`
+	Filename   string    `json:"filename"`
 }
 
 

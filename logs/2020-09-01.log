@@ -10,3 +10,7 @@ time="2020-09-01 10:28:41" level=info msg="| 200 |    426.1996ms |       127.0.0
 time="2020-09-01 10:29:20" level=info msg="| 400 |            0s |       127.0.0.1 | POST | /api/email/send |"
 time="2020-09-01 10:29:34" level=info msg="| 400 |    320.4441ms |       127.0.0.1 | POST | /api/email/send |"
 time="2020-09-01 10:31:04" level=info msg="| 400 |    398.6691ms |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-01 15:00:17" level=info msg="| 200 |    448.6797ms |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-01 15:07:01" level=info msg="| 400 |     26.0988ms |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-01 15:09:48" level=info msg="| 200 |     411.333ms |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-01 15:19:43" level=info msg="| 200 |    437.2416ms |       127.0.0.1 | POST | /api/email/send |"

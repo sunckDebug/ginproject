@@ -15,13 +15,13 @@ const(
 )
 
 
-func SendMail(fromUser, toUser, subject string, filename string) error {
+func SendMail(fromUser string, toUser []string, subject string, filename string) error {
 	// NewEmail返回一个email结构体的指针
 	e := email.NewEmail()
 	// 发件人
 	e.From = fromUser
 	// 收件人(可以有多个)
-	e.To = []string{toUser}
+	e.To = toUser
 	// 邮件主题
 	e.Subject = subject
 	// 以路径将文件作为附件添加到邮件中
