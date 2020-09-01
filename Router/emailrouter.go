@@ -14,6 +14,7 @@ func EmailRouter(Router *gin.RouterGroup) {
 		Email.POST("/delete", Controllers.DeleteIndex)
 		Email.POST("/update", Controllers.UpdateIndex)
 		Email.POST("/retrieve", Controllers.RetrieveIndex)
+		Email.POST("/send", Controllers.SendIndex)
 	}
 
 }

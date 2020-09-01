@@ -52,6 +52,7 @@ func SelIndex(c *gin.Context)  {
 		"message": "success",
 		"data": reqInfo,
 	})
+	return
 }
 
 func AllIndex(c *gin.Context)  {
@@ -90,6 +91,7 @@ func AllIndex(c *gin.Context)  {
 		"message": "success",
 		"data": email,
 	})
+	return
 }
 
 
@@ -105,6 +107,7 @@ func LogIndex(c *gin.Context)  {
 		"message": "success",
 		"data": "",
 	})
+	return
 }
 
 func RedIndex(c *gin.Context)  {
@@ -128,4 +131,5 @@ func RedIndex(c *gin.Context)  {
 		"message": "success",
 		"data": "",
 	})
+	return
 }

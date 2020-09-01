@@ -8,6 +8,7 @@ require (
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/jinzhu/gorm v1.9.16
+	github.com/jordan-wright/email v4.0.1-0.20200824153738-3f5bafa1cd84+incompatible
 	github.com/sirupsen/logrus v1.6.0
 	github.com/spf13/viper v1.7.1
 )

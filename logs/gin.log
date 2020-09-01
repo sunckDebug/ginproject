@@ -12,10 +12,6 @@
 [GIN-debug] POST   /api/email/delete         --> gin/Controllers.DeleteIndex (6 handlers)
 [GIN-debug] POST   /api/email/update         --> gin/Controllers.UpdateIndex (6 handlers)
 [GIN-debug] POST   /api/email/retrieve       --> gin/Controllers.RetrieveIndex (6 handlers)
+[GIN-debug] POST   /api/email/send           --> gin/Controllers.SendIndex (6 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2020/08/28 - 18:22:42 | 200 |       1.979ms |       127.0.0.1 | POST     "/api/email/delete"
-[GIN] 2020/08/28 - 18:23:06 | 200 |      3.0079ms |       127.0.0.1 | POST     "/api/email/create"
-[GIN] 2020/08/28 - 18:23:31 | 200 |      1.0042ms |       127.0.0.1 | POST     "/api/email/create"
-[GIN] 2020/08/28 - 18:23:38 | 200 |      2.0044ms |       127.0.0.1 | POST     "/api/email/create"
-[GIN] 2020/08/28 - 18:24:04 | 200 |      3.0082ms |       127.0.0.1 | POST     "/api/email/create"
-[GIN] 2020/08/28 - 18:25:06 | 200 |      2.0047ms |       127.0.0.1 | POST     "/api/email/delete"
+[GIN] 2020/09/01 - 10:31:04 | 400 |    398.6691ms |       127.0.0.1 | POST     "/api/email/send"

@@ -11,6 +11,12 @@ type Email struct {
 	Subscribed bool    `json:"subscribed"`
 }
 
+type SendLog struct {
+	Username   string  `json:"username"`
+	Content   string   `json:"content"`
+	Filename   string  `json:"filename"`
+}
+
 
 func (this *Email) Insert() (id int, err error) {
 	var emailModel Models.Email
@@ -26,9 +32,9 @@ func (this *Email) Insert() (id int, err error) {
 func (this *Email) Delete() (id int, err error) {
 	var emailModel Models.Email
 	emailModel.ID = this.Id
-	emailModel.UserID = this.UserID
-	emailModel.Email = this.Email
-	emailModel.Subscribed = this.Subscribed
+	//emailModel.UserID = this.UserID
+	//emailModel.Email = this.Email
+	//emailModel.Subscribed = this.Subscribed
 	id, err = emailModel.Delete()
 	return
 }
