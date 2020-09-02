@@ -2,14 +2,18 @@ package Mysql
 
 import (
 	"fmt"
+	"gin/Config"
 	"github.com/go-redis/redis"
 )
 
 var RD *redis.Client
 
 func init() {
+	redisIp := Config.ReadIni("redis", "redis_ip")
+	redisPort := Config.ReadIni("redis", "redis_port")
+
 	RD = redis.NewClient(&redis.Options{
-		Addr:     fmt.Sprintf("127.0.0.1:6379"),
+		Addr:     fmt.Sprintf(redisIp + ":" + redisPort),
 		Password: "",
 		DB:       0,
 	})
