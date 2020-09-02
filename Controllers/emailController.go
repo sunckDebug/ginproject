@@ -132,3 +132,35 @@ func FileDownload(c *gin.Context){
 	c.Writer.Header().Add("Content-Type", "application/octet-stream")
 	c.File(name)
 }
+
+
+// 多线程下 mysql redis 连接的使用
+func Multithreading(c *gin.Context)  {
+	go func() {
+		// 错误捕获处理
+		defer Utils.ErrorCapture()
+
+		// 全查询
+		var email []Models.Email
+		Mysql.DB.Find(&email) // find product with code l1212
+		for i := 0; i < len(email); i++ {
+			fmt.Println(email[i].ID, email[i].UserID, email[i].Email, email[i].Subscribed)
+		}
+
+		// redis 字符串增删改查
+		res0, err0 := Mysql.RD.Do("set", "key", "ZhangHaoHao").Result()
+		fmt.Println("00000", res0, err0)
+
+		res1, err1 := Mysql.RD.Do("get", "key").Result()
+		fmt.Println("11111", res1, err1)
+
+		res2, err2 := Mysql.RD.Do("del", "key").Result()
+		fmt.Println("22222", res2, err2)
+
+		res3, err3 := Mysql.RD.Do("get", "key").Result()
+		fmt.Println("33333", res3, err3)
+
+	}()
+
+	c.JSON(http.StatusOK, gin.H{"code": 1, "message": "异步任务"});return
+}

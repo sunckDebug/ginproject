@@ -1,7 +1,7 @@
 package Mysql
 
 import (
-	"gin/Config"
+	"gin/Utils"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
@@ -11,11 +11,11 @@ import (
 var DB *gorm.DB
 
 func init()  {
-	mysqlIp := Config.ReadIni("mysql", "mysql_ip")
-	mysqlPort := Config.ReadIni("mysql", "mysql_port")
-	mysqlUser := Config.ReadIni("mysql", "mysql_user")
-	mysqlPwd := Config.ReadIni("mysql", "mysql_pwd")
-	mysqlDb := Config.ReadIni("mysql", "mysql_db")
+	mysqlIp := Utils.ReadIni("mysql", "mysql_ip")
+	mysqlPort := Utils.ReadIni("mysql", "mysql_port")
+	mysqlUser := Utils.ReadIni("mysql", "mysql_user")
+	mysqlPwd := Utils.ReadIni("mysql", "mysql_pwd")
+	mysqlDb := Utils.ReadIni("mysql", "mysql_db")
 
 	var err error
 	//DB, err = gorm.Open("mysql", "root:root@tcp(127.0.0.1:3306)/go?charset=utf8&parseTime=True&loc=Local")

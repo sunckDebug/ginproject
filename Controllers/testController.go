@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"gin/Databases"
 	"gin/Middlewares"
+	"gin/Models"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 	"net/http"
 	_ "strconv"
+	"time"
 )
 
 
@@ -52,48 +54,42 @@ func SelIndex(c *gin.Context)  {
 }
 
 func AllIndex(c *gin.Context)  {
-	//defer func() {
-	//	err := recover() // recover内置函数，可以捕捉到异常
-	//	if err != nil {  // 说明捕捉到错误
-	//		// 请求时间
-	//		datetime := time.Now().Format("2006-01-02 15:04:05")
-	//		// 报错信息
-	//		str1 := fmt.Sprintf("%s", err)
-	//		// 请求路由
-	//		reqUri := c.Request.RequestURI
-	//		// 写Error级别的日志
-	//		Middlewares.Logger().WithFields(logrus.Fields{
-	//			"name": "zhh",
-	//		}).Error(err)
-	//		// 错误信息写入数据库记录
-	//		error := Models.Error{DateTime: datetime, Body: str1, ReqUri: reqUri, Name: "zhh"}
-	//		Mysql.DB.Create(&error)
-	//	}
-	//}()
-	//
-	//// 全查询
-	//var email []Models.Email
-	//Mysql.DB.Find(&email) // find product with code l1212
-	//
-	//// 带条件查询 模糊查询
-	////Mysql.DB.Where("email LIKE ?", "%163%").Find(&email)
-	//
-	//for i := 0; i < len(email); i++ {
-	//	fmt.Println(email[i].ID, email[i].UserID, email[i].Email, email[i].Subscribed)
-	//}
-	//
-	//c.JSON(http.StatusOK, gin.H{
-	//	"code": 1,
-	//	"message": "success",
-	//	"data": email,
-	//})
-	//return
+	defer func() {
+		err := recover() // recover内置函数，可以捕捉到异常
+		if err != nil {  // 说明捕捉到错误
+			// 请求时间
+			datetime := time.Now().Format("2006-01-02 15:04:05")
+			// 报错信息
+			str1 := fmt.Sprintf("%s", err)
+			// 请求路由
+			reqUri := c.Request.RequestURI
+			// 写Error级别的日志
+			Middlewares.Logger().WithFields(logrus.Fields{
+				"name": "zhh",
+			}).Error(err)
+			// 错误信息写入数据库记录
+			error := Models.Error{DateTime: datetime, Body: str1, ReqUri: reqUri, Name: "zhh"}
+			Mysql.DB.Create(&error)
+		}
+	}()
+
+	// 全查询
+	var email []Models.Email
+	Mysql.DB.Find(&email) // find product with code l1212
+
+	// 带条件查询 模糊查询
+	//Mysql.DB.Where("email LIKE ?", "%163%").Find(&email)
+
+	for i := 0; i < len(email); i++ {
+		fmt.Println(email[i].ID, email[i].UserID, email[i].Email, email[i].Subscribed)
+	}
 
 	c.JSON(http.StatusOK, gin.H{
 		"code": 1,
 		"message": "success",
-		"data": "",
+		"data": email,
 	})
+	return
 }
 
 
