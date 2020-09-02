@@ -13,5 +13,5 @@
 [GIN-debug] POST   /api/email/update         --> gin/Controllers.UpdateIndex (6 handlers)
 [GIN-debug] POST   /api/email/retrieve       --> gin/Controllers.RetrieveIndex (6 handlers)
 [GIN-debug] POST   /api/email/send           --> gin/Controllers.SendIndex (6 handlers)
+[GIN-debug] GET    /api/email/file           --> gin/Controllers.FileDownload (6 handlers)
 [GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2020/09/01 - 15:19:43 | 200 |    437.2416ms |       127.0.0.1 | POST     "/api/email/send"

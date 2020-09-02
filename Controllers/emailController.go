@@ -1,6 +1,7 @@
 package Controllers
 
 import (
+	"fmt"
 	Mysql "gin/Databases"
 	"gin/Models"
 	"gin/Services"
@@ -112,8 +113,22 @@ func SendIndex(c *gin.Context)  {
 		c.JSON(http.StatusBadRequest, gin.H{"code": -1, "message": err2.Error()});return
 	}
 
+
 	c.JSON(http.StatusOK, gin.H{"code": 1, "message": "发送邮件成功", "data": ""});return
 }
 
 
+// 文件下载
+func FileDownload(c *gin.Context){
 
+	name := c.Query("name")
+
+	// 判断关键字段是否传递
+	if name == ""{
+		c.JSON(200, gin.H{"code": -1, "message": "filename字段不可为空"});return
+	}
+
+	c.Writer.Header().Add("Content-Disposition", fmt.Sprintf("attachment; filename=%s", name))//fmt.Sprintf("attachment; filename=%s", filename)对下载的文件重命名
+	c.Writer.Header().Add("Content-Type", "application/octet-stream")
+	c.File(name)
+}

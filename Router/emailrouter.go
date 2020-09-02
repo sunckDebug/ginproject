@@ -15,6 +15,7 @@ func EmailRouter(Router *gin.RouterGroup) {
 		Email.POST("/update", Controllers.UpdateIndex)
 		Email.POST("/retrieve", Controllers.RetrieveIndex)
 		Email.POST("/send", Controllers.SendIndex)
+		Email.GET("/file", Controllers.FileDownload)
 	}
 
 }

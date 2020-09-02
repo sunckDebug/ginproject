@@ -1,0 +1,7 @@
+time="2020-09-02 10:13:18" level=info msg="| 400 |  1m0.1064128s |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-02 10:14:09" level=info msg="| 400 |   20.0815189s |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-02 10:23:56" level=info msg="| 200 |   13.7795003s |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-02 10:33:10" level=info msg="| 400 |    1.3197423s |       127.0.0.1 | POST | /api/email/send |"
+time="2020-09-02 12:09:52" level=info msg="| 200 |      1.0025ms |       127.0.0.1 | POST | /api/email/file |"
+time="2020-09-02 12:12:19" level=info msg="| 200 |            0s |       127.0.0.1 | GET | /api/email/file?name=logs/gin.log |"
+time="2020-09-02 12:13:58" level=info msg="| 200 |       501.1µs |       127.0.0.1 | GET | /api/email/file?name=logs/gin.log |"
