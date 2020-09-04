@@ -20,18 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9de69cf8-4433-478c-932b-12e65ef66edd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Utils/errorcapture.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/redconfig.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/emailController.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/emailController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/testController.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/testController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Databases/mysql.go" beforeDir="false" afterPath="$PROJECT_DIR$/Databases/mysql.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Databases/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/Databases/redis.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Router/emailrouter.go" beforeDir="false" afterPath="$PROJECT_DIR$/Router/emailrouter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/utils1.go" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/sendmail.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/errorcapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/errorcapture.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/2020-09-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2020-09-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,21 +122,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599032401403" />
-    <state width="1877" height="339" key="GridCell.Tab.0.bottom" timestamp="1599037175682">
+    <state width="1877" height="407" key="GridCell.Tab.0.bottom" timestamp="1599038747151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599037175682" />
-    <state width="1877" height="339" key="GridCell.Tab.0.center" timestamp="1599037175681">
+    <state width="1877" height="407" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599038747151" />
+    <state width="1877" height="407" key="GridCell.Tab.0.center" timestamp="1599038747151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599037175681" />
-    <state width="1877" height="339" key="GridCell.Tab.0.left" timestamp="1599037175681">
+    <state width="1877" height="407" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599038747151" />
+    <state width="1877" height="407" key="GridCell.Tab.0.left" timestamp="1599038747151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599037175681" />
-    <state width="1877" height="339" key="GridCell.Tab.0.right" timestamp="1599037175681">
+    <state width="1877" height="407" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599038747151" />
+    <state width="1877" height="407" key="GridCell.Tab.0.right" timestamp="1599038747151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599037175681" />
+    <state width="1877" height="407" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599038747151" />
   </component>
 </project>

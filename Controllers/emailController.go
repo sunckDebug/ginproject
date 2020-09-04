@@ -137,13 +137,14 @@ func FileDownload(c *gin.Context){
 // 多线程下 mysql redis 连接的使用
 func Multithreading(c *gin.Context)  {
 	go func() {
+
 		// 错误捕获处理
 		defer Utils.ErrorCapture()
 
 		// 全查询
 		var email []Models.Email
 		Mysql.DB.Find(&email) // find product with code l1212
-		for i := 0; i < len(email); i++ {
+		for i := 0; i <= len(email); i++ {
 			fmt.Println(email[i].ID, email[i].UserID, email[i].Email, email[i].Subscribed)
 		}
 
