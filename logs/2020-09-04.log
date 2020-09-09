@@ -1,0 +1,5 @@
+time="2020-09-04 16:48:07" level=info msg="| 200 |   17.3210765s |       127.0.0.1 | GET | /api/test/ping |"
+time="2020-09-04 16:53:05" level=info msg="| 200 |    1.1834199s |       127.0.0.1 | GET | /api/test/ping |"
+time="2020-09-04 16:53:06" level=info msg="| 200 |    861.6431ms |       127.0.0.1 | GET | /api/test/ping |"
+time="2020-09-04 16:53:07" level=info msg="| 200 |    713.8059ms |       127.0.0.1 | GET | /api/test/ping |"
+time="2020-09-04 16:53:08" level=info msg="| 200 |    1.0330903s |       127.0.0.1 | GET | /api/test/ping |"

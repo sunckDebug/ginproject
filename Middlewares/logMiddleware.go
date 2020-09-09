@@ -84,13 +84,6 @@ func LoggerToFile() gin.HandlerFunc {
 		// 请求IP
 		clientIP := c.ClientIP()
 
-		// 请求数据
-		//body, _ := ioutil.ReadAll(c.Request.Body)
-
-		// 请求时间
-		//datetime := time.Now().Format("2006-01-02 15:04:05")
-
-
 		//日志格式
 		logger.Infof("| %3d | %13v | %15s | %s | %s |",
 			statusCode,
@@ -99,12 +92,6 @@ func LoggerToFile() gin.HandlerFunc {
 			reqMethod,
 			reqUri,
 		)
-
-		// 写入数据库
-		//str1 := fmt.Sprintf("%13v", latencyTime)
-		//str2 := fmt.Sprintf("%s", body)
-		//req := Models.Request{StatusCode:statusCode, LatencyTime:str1, RequestTime:datetime, ClientIP:clientIP, ReqMethod: reqMethod, ReqUri:reqUri, Body:str2}
-		//Mysql.DB.Create(&req)
 	}
 }
 

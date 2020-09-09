@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>  
+	<head>  
+		<title>VLC 测试</title>  
+		<script src="../../static/jquery.min.js"></script>
+	</head>  
+	<body>  
+		<!--将<embed>标签嵌入<object>标签内部之后可以同时兼容IE和火狐-->  
+		<object classid="clsid:E23FE9C6-778E-49D4-B537-38FCDE4887D8"   
+				codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab"   
+				width="640"   
+				height="480"   
+				events="True"   
+				id="vlc1">   
+			<!-- <param name="MRL" value="udp://@239.255.1.1:1234" />    -->
+			<param name="ShowDisplay" value="True" />   
+			<param name="Loop" value="False" />   
+			<param name="AutoPlay" value="True" />   
+				<embed type="application/x-vlc-plugin"   
+					   pluginspage="http://www.videolan.org"  
+					   width="640"  
+					   height="480"  
+					   src="rtsp://admin:admin123@192.168.18.66:554/cam/realmonitor?channel=1&subtype=1"; 
+					   id="vlc">  
+				</embed>  
+		</object>  
+		
+		<!--将<embed>标签嵌入<object>标签内部之后可以同时兼容IE和火狐-->  
+		<object classid="clsid:E23FE9C6-778E-49D4-B537-38FCDE4887D8"   
+				codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab"   
+				width="640"   
+				height="480"   
+				events="True"   
+				id="vlc2">   
+			<!-- <param name="MRL" value="udp://@239.255.1.1:1234" />    -->
+			<param name="ShowDisplay" value="True" />   
+			<param name="Loop" value="False" />   
+			<param name="AutoPlay" value="True" />   
+				<embed type="application/x-vlc-plugin"   
+					pluginspage="http://www.videolan.org"  
+					width="640"  
+					height="480"  
+					src="rtsp://admin:admin123@192.168.18.66:554/cam/realmonitor?channel=2&subtype=1"; 
+					id="vlc">  
+				</embed>  
+		</object>
+
+		<!--将<embed>标签嵌入<object>标签内部之后可以同时兼容IE和火狐-->  
+		<object classid="clsid:E23FE9C6-778E-49D4-B537-38FCDE4887D8"   
+				codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab"   
+				width="640"   
+				height="480"   
+				events="True"   
+				id="vlc3">   
+			<!-- <param name="MRL" value="udp://@239.255.1.1:1234" />    -->
+			<param name="ShowDisplay" value="True" />   
+			<param name="Loop" value="False" />   
+			<param name="AutoPlay" value="True" />   
+				<embed type="application/x-vlc-plugin"   
+					pluginspage="http://www.videolan.org"  
+					width="640"  
+					height="480"  
+					src="rtsp://admin:admin123@192.168.18.66:554/cam/realmonitor?channel=3&subtype=1"; 
+					id="vlc">  
+				</embed>  
+		</object>
+	</body>  
+</html> 
